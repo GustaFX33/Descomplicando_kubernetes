@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: StorageClass
+metadata:
+  name: nfs
+provisioner: kubernetes.io/no-provisioner
+reclaimPolicy: Retain
+volumeBindingMode: WaitingForFirstConsumer
+parameters:
+  archiveOnDelete: "false"
+
